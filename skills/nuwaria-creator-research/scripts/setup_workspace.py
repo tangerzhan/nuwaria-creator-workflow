@@ -30,8 +30,9 @@ def initialize(workspace, batch_date, target=100):
         write(project / (name + '.json'), {})
     write(project / 'contact_email_aliases.json', [])
     write(project / 'existing.json', [])
-    write(project / 'excluded_handles.json', [])
-    write(project / 'historical_exclusions.json', {'handles': [], 'emails': [], 'person_keys': []})
+    team = json.loads((SKILL / 'assets/team_history.json').read_text(encoding='utf-8'))
+    write(project / 'excluded_handles.json', team['handles'])
+    write(project / 'historical_exclusions.json', {k: team[k] for k in ['handles', 'emails', 'person_keys']})
     shutil.copyfile(SKILL / 'assets/schema.json', project / 'schema.json')
     write(project / 'project.json', {
         'date': batch_date, 'target': target, 'cdp': 'http://127.0.0.1:9222',
@@ -46,7 +47,7 @@ def initialize(workspace, batch_date, target=100):
         'zoho_auth': str(workspace / 'zoho_mail.auth.json'), 'sender_email': '',
         'user_logistics_hold_regions': [],
         'user_logistics_note': '首次配置：与团队确认当前可寄送地区后再联系。',
-        'history_scope_note': '空白初始化；尚未读取团队 Notion 或本地历史。'
+        'history_scope_note': '已载入随技能分发的团队去重快照：' + team['generated_at'] + '；仍需刷新最新 Notion。'
     })
     (project / 'AGENTS.md').write_text(
         '使用已安装的 nuwaria-creator-research 技能。审核主表 production_reviews.json。'

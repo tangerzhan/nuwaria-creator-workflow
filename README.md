@@ -2,7 +2,7 @@
 
 把 Instagram/TikTok 达人发现、初筛、12 条内容复核、评分、Excel 导出，以及已授权的 Zoho 建联和 Notion 同步交给 Codex 协作完成。包含自足的 Codex skill 和 Python 工具；适用 Windows / macOS。macOS 路径和可执行文件已适配，但发布前未在真实 Mac 上运行浏览器流程。
 
-**没有 GitHub 账号也能安装：**由有私有仓库权限的同事下载 ZIP 转发，解压后按下面步骤操作。安装包不包含账号凭证、历史达人名单、收件地址、邮件或浏览器登录状态。
+**没有 GitHub 账号也能安装：**由有私有仓库权限的同事下载 ZIP 转发，解压后按下面步骤操作。安装包包含团队历史去重索引（账号、别名、公开联系邮箱、人物标识和初筛结论），不包含凭证、收件地址、邮件正文或浏览器登录状态。仅在授权团队内分享。
 
 ## 安装给同事
 
@@ -49,4 +49,14 @@ python -m venv "$env:USERPROFILE/.local/share/nuwaria-venv"
 python -m unittest discover -s tests -v
 ```
 
-测试使用合成数据和临时目录，不访问真实 Notion、Zoho 或达人页面。发布目录只收录脚本、说明、匿名结构模板和测试；禁止把整个原工作区提交到 GitHub。
+测试使用临时目录，不访问真实 Notion、Zoho 或达人页面。发布目录包含最小团队去重快照；禁止把整个原工作区提交到 GitHub。
+
+## 团队去重快照
+
+`skills/nuwaria-creator-research/assets/team_history.json` 随安装分发，新工作区自动载入；已有工作区使用新版技能运行 `queue-check` 或 `scan` 时也会合并。快照含本地历史正式名单、当前未完成批次已入选者，以及旧 hold/exclude 初筛记录。旧初筛可凭新证据在本批标记 pass 后重查；已入选账号、别名和完整邮箱仍拦截。
+
+这是导出时的快照，不会实时同步同事的新名单或联系状态。新增结果后由负责人更新快照并提交，团队更新技能；外发前仍查最新 Notion/Zoho。负责人导出命令：
+
+```bash
+python skills/nuwaria-creator-research/scripts/export_team_history.py --project <含完整历史索引的当前批次> --output skills/nuwaria-creator-research/assets/team_history.json
+```

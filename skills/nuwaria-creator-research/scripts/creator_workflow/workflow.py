@@ -9,6 +9,9 @@ def write(p,d):
 def history(project):
  from history_scope import external_history,scope_verified_own_records
  c=read(project/'project.json');ex=set(read(project/'excluded_handles.json'));emails=set();people=set()
+ from team_history import bundled_history
+ team=bundled_history()
+ ex.update(team['handles']);emails.update(team['emails']);people.update(team['person_keys'])
  rx=r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'
  for row in external_history(project,read(project/'existing.json')):
   props=row.get('properties',{});txt=json.dumps(props,ensure_ascii=False)

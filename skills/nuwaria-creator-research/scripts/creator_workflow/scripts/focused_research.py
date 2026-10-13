@@ -15,7 +15,8 @@ def prepare_queue(rows):
  reviews=load('production_reviews.json')
  current={norm(a) for h,v in reviews.items() if v.get('verdict')=='include' for a in [h,*v.get('aliases',[])]}
  screened=screening()
- prior_screened={}
+ from team_history import bundled_history
+ prior_screened=dict(bundled_history()['screening'])
  for folder in CONFIG.get('history_projects',[]):
   previous=Path(folder)
   if previous.resolve()==P.resolve():continue

@@ -9,6 +9,8 @@ description: 为 NUWARIA 寻找、初筛和复核 Instagram/TikTok 达人，建�
 
 每次研究先读 [workflow.md](references/workflow.md)。唯一执行入口是 `scripts/creator_workflow/workflow.py --project <批次绝对路径>`。继续任务先运行 `status`；新批次用 `init --from-project` 继承既有历史。共享 Notion 存在时先只读刷新；无法取得完整历史必须披露去重范围。
 
+安装包内 assets/team_history.json 是团队授权的最小去重快照，初始化和队列预查自动使用；按 generated_at 披露截止时间，不当作实时联系状态。新增结果后由负责人使用 scripts/export_team_history.py 更新并提交快照，其他同事更新技能。
+
 - 先判断个人生活/选物主线与画面，再对初筛通过者深查。约 20–30 条有来源线索批量查重，每组约 6 人生成并实际查看初筛图。
 - 用户希望寻找已成功合作的相似博主时，先读已发布/返图的真实证据，以其生活方式和物件使用为参考，沿公开评论和相邻内容发现新人；待寄样、未发布和负面反馈不冒充成功。
 - 最近连续 12 条实际内容至少 4 条独立个人佩戴、使用、携带或赠礼依据。同一套造型或同一事件重复发布不重复计数。实际打开图片审阅；抽帧不等于完整播放，图文首图不等于遍历轮播。

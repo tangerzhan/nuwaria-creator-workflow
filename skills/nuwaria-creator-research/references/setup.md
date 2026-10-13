@@ -47,7 +47,7 @@ python <技能目录>/scripts/setup_workspace.py --workspace <工作区绝对路
 python <技能目录>/scripts/creator_workflow/workflow.py --project <工作区>/candidate_research_2026-10-12 status
 ```
 
-已有同名批次时不会覆盖。新环境没有历史达人，必须从团队授权来源取得历史再声称团队去重完成。首次使用不会读取作者的任何历史项目。
+已有同名批次时不会覆盖。首次初始化自动载入 assets/team_history.json 团队去重快照，无需作者本机路径。快照时间见 generated_at；它不是实时联系状态，继续连接团队 Notion 获取最新记录。旧工作区更新技能后运行 queue-check 或 scan 也会合并该快照。
 
 后续批次使用 `workflow.py --project <新目录> init --date YYYY-MM-DD --target 100 --from-project <旧目录>`，继承配置和历史去重，生成空审核表。
 
