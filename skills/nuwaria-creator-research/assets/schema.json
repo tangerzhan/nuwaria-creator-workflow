@@ -1,0 +1,269 @@
+{
+  "properties": {
+    "是否暂停推进": {
+      "type": "checkbox",
+      "checkbox": {}
+    },
+    "评分": {
+      "type": "number",
+      "number": {}
+    },
+    "互动率": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "发送日期": {
+      "type": "date",
+      "date": {}
+    },
+    "建联来源": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "级别": {
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "name": "DUP"
+          },
+          {
+            "name": "X"
+          },
+          {
+            "name": "HOLD"
+          },
+          {
+            "name": "C"
+          },
+          {
+            "name": "B"
+          },
+          {
+            "name": "A"
+          },
+          {
+            "name": "A+"
+          }
+        ]
+      }
+    },
+    "联系方式来源": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "TikTok粉丝数": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "建联备注": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "风险/待核实": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Instagram粉丝数": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "回复日期": {
+      "type": "date",
+      "date": {}
+    },
+    "主页链接": {
+      "type": "url",
+      "url": {}
+    },
+    "粉丝数": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "外部核验备注": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "合作方式": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "平均播放": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "平台": {
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "name": "Instagram"
+          },
+          {
+            "name": "TikTok"
+          },
+          {
+            "name": "TikTok + Instagram"
+          },
+          {
+            "name": "Instagram / Website"
+          },
+          {
+            "name": "TikTok + LTK"
+          },
+          {
+            "name": "Website / Instagram未量化"
+          },
+          {
+            "name": "TikTok + Instagram + YouTube"
+          },
+          {
+            "name": "Website + Instagram"
+          }
+        ]
+      }
+    },
+    "近期活跃": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "账号": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "联系状态": {
+      "type": "multi_select",
+      "multi_select": {
+        "options": [
+          {
+            "name": "未联系"
+          },
+          {
+            "name": "已发信"
+          },
+          {
+            "name": "待跟进"
+          },
+          {
+            "name": "待二次回复"
+          },
+          {
+            "name": "已报价"
+          },
+          {
+            "name": "已完成"
+          },
+          {
+            "name": "已暂停"
+          },
+          {
+            "name": "待寄样"
+          }
+        ]
+      }
+    },
+    "降级/淘汰原因": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "来源链接": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "邮件主题": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "下一步": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "账号调性分析": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "达人姓名": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "推荐产品": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "跟进日期": {
+      "type": "date",
+      "date": {}
+    },
+    "TikTok主页": {
+      "type": "url",
+      "url": {}
+    },
+    "筛选行动": {
+      "type": "select",
+      "select": {
+        "options": [
+          {
+            "name": "不发"
+          },
+          {
+            "name": "补核后再定"
+          },
+          {
+            "name": "低优先：暂缓"
+          },
+          {
+            "name": "观察池：补评论/商单证据"
+          },
+          {
+            "name": "P2 终核后联系"
+          },
+          {
+            "name": "P2 联系"
+          },
+          {
+            "name": "P1 终核后联系"
+          },
+          {
+            "name": "P1 优先联系"
+          }
+        ]
+      }
+    },
+    "置信度": {
+      "type": "number",
+      "number": {}
+    },
+    "适配依据": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "来源表": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "近期内容": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "公开联系方式": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "创作者所在地": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "Instagram主页": {
+      "type": "url",
+      "url": {}
+    },
+    "商业价值分析": {
+      "type": "rich_text",
+      "rich_text": {}
+    },
+    "名称": {
+      "type": "title",
+      "title": {}
+    }
+  }
+}

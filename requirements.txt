@@ -1,0 +1,1 @@
+-r skills/nuwaria-creator-research/requirements.txt
